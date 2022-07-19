@@ -13,12 +13,12 @@ function quicksort(array) {
         return array;
     }
     
-    var pivot = ( array[0].height * array[0].width );
+    let pivot = ( array[0].height * array[0].width );
     
-    var left = []; 
-    var right = [];
+    let left = []; 
+    let right = [];
     
-    for (var i = 1; i < array.length; i++) {
+    for (let i = 1; i < array.length; i++) {
         ( array[i].height * array[i].width ) > pivot ? left.push(array[i]) : right.push(array[i]);
     }
     return quicksort(left).concat(array[0], quicksort(right));
@@ -33,7 +33,7 @@ function turnIntoSquares(array) {
     
     for ( let i = 0; i < array.length; i++ ) {
         let s1 = calcSquare( array[i].width, array[i].height );
-        sarray1[i] = [s1];
+        sarray1[i] = s1;
     }
     return sarray1;
 }
@@ -48,4 +48,4 @@ function sortBySquare(array) {
 }
 
 console.log ( turnIntoSquares( sarray ) );
-console.log( sortBySquare( sarray ) );
+sortBySquare( sarray );
