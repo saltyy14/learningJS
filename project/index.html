@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>First website</title>
-
-    <script>
-        function changeText () {
-            const button = document.getElementById('input_button_bg_change');
-            const bgtext = document.getElementById('bg_text');
-            bgtext.style.backgroundColor = "red";
-            bgtext.innerHTML = "Осваиваем мир!";
-        }
-    </script>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-        <button onclick="changeText()"
-        id="input_button_bg_change" style="
-            padding: 20px;
-            border-radius: 15px;">
+
+<body>
+    <h2 class="pagetext">
+        Привет, мир!
+    </h2>
+    <br>
+    <br>
+    <button class="buttons">
         Кликни меня!
-        </button>
-        <br>
-        <br>
-        <h2 id="bg_text" style="background-color: cornflowerblue;">
-            Привет, мир!
-        </h2>
+    </button>   
 </body>
+
+<script >
+    const button = document.querySelector(".buttons");
+    button.addEventListener("click", changeClass);
+    
+    function changeClass () {
+        const pagetext = document.querySelector(".pagetext");
+        pagetext.className = "pagetextclick";
+        pagetext.innerHTML = "Осваиваем мир!";
+    }
+</script>
 </html> 
