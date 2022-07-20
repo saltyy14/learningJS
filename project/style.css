@@ -1,0 +1,10 @@
+.buttons {
+    padding: 20px;
+    border-radius: 15px;
+}
+.pagetext {
+    background-color: cornflowerblue;
+}
+.pagetextclick {
+    background-color: red;
+}
